@@ -1,16 +1,26 @@
-Isotherm fitting module (:py:mod:'rtdtest.isotherm')
-========================
+Isotherm fitting module (:py:mod:`pyAPEP.isofit`)
+====================================================
 
 detailed discriptions are here.
 
 Functions
 ---------
 
-.. currentmodule:: rtdtest.isotherm
-.. autofunction:: iso2err
+.. currentmodule:: pyAPEP.isofit
+.. autofunction:: Arrh
 
-.. currentmodule:: rtdtest.isotherm
+.. currentmodule:: pyAPEP.isofit
+.. autofunction:: Lang
+
+.. currentmodule:: pyAPEP.isofit
+.. autofunction:: Freu
+
+
+.. currentmodule:: pyAPEP.isofit
 .. autofunction:: find_par
+
+.. currentmodule:: pyAPEP.isofit
+.. autofunction:: best_isomodel
 
 Usage
 ------

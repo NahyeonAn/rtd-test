@@ -12,15 +12,15 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('/Users/Yongho/Documents/GitHub/'))
+sys.path.insert(0, os.path.abspath('/Users/Yongho/Documents/GitHub/rtdtest/'))
 
-import rtdtest.isofit
-import rtdtest.simide
-import rtdtest.simsep
+import pyAPEP.isofit
+import pyAPEP.simide
+import pyAPEP.simsep
 
 # -- Project information -----------------------------------------------------
 
-project = 'rtdtest'
+project = 'pyAPEP'
 copyright = '2022, anna'
 author = 'anna'
 

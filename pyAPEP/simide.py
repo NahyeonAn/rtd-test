@@ -1,3 +1,6 @@
+"""
+simide - Python module for ieal PSA simulation.
+"""
 
 # %% Import python packages required
 import numpy as np

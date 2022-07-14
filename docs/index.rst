@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to rtdtest's documentation!
+Welcome to pyAPEP's documentation!
 ===================================
 Put tthe introduction to your tool here,..
 
@@ -14,7 +14,6 @@ Put tthe introduction to your tool here,..
    isofit
    simide
    simsep
-
 
 Indices and tables
 ==================

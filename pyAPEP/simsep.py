@@ -1,3 +1,6 @@
+"""
+simsep - Python module for real PSA simulation.
+"""
 
 # %% Import packages
 import numpy as np

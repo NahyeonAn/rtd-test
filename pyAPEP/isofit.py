@@ -1,3 +1,6 @@
+"""
+isofit - Python module for isotherm paramter fitting.
+"""
 #%% Importing
 # numericals
 import numpy as np
