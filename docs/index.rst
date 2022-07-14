@@ -15,6 +15,8 @@ Put tthe introduction to your tool here,..
    simide
    simsep
 
+   Tutorials
+
 Indices and tables
 ==================
 
