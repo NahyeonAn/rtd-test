@@ -14,8 +14,7 @@ Put tthe introduction to your tool here,..
    isofit
    simide
    simsep
-
-   Tutorials
+   tutorials
 
 Indices and tables
 ==================
