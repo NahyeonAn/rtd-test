@@ -1,6 +1,9 @@
 """
-simide - Python module for ieal PSA simulation.
+This module contains objects to characterize the pure-component adsorption
+isotherms from experimental or simulated data. These will be fed into the
+IAST functions in pyiast.py.
 """
+
 
 # %% Import python packages required
 import numpy as np
@@ -27,7 +30,55 @@ def check_isotherm(n_comp, isotherm_fun,):
     return True
 
 class IdealColumn:
-
+    """
+    Class to characterize pure-component isotherm data with an analytical model.
+    Data fitting is done during instantiation.
+    
+    Models supported are as follows. Here, :math:`L` is the gas uptake,
+    :math:`P` is pressure (fugacity technically).
+    
+    * Langmuir isotherm model
+    
+    .. math::
+    
+        L(P) = M\\frac{KP}{1+KP},
+        
+    * Quadratic isotherm model
+    
+    .. math::
+    
+        L(P) = M \\frac{(K_a + 2 K_b P)P}{1+K_aP+K_bP^2}
+        
+    * Brunauer-Emmett-Teller (BET) adsorption isotherm
+    
+    .. math::
+    
+        L(P) = M\\frac{K_A P}{(1-K_B P)(1-K_B P+ K_A P)}
+        
+    * Dual-site Langmuir (DSLangmuir) adsorption isotherm
+    
+    .. math::
+    
+        L(P) = M_1\\frac{K_1 P}{1+K_1 P} +  M_2\\frac{K_2 P}{1+K_2 P}
+        
+    * Asymptotic approximation to the Temkin Isotherm
+    (see DOI: 10.1039/C3CP55039G)
+    
+    .. math::
+    
+        L(P) = M\\frac{KP}{1+KP} + M \\theta (\\frac{KP}{1+KP})^2 (\\frac{KP}{1+KP} -1)
+        
+    * Henry's law. Only use if your data is linear, and do not necessarily trust
+      IAST results from Henry's law if the result required an extrapolation
+      of your data; Henry's law is unrealistic because the adsorption sites
+      will saturate at higher pressures.
+      
+    .. math::
+    
+        L(P) = K_H P
+        
+    """
+    
     def __init__(self, n_comp, isotherm_fun = None,):
         # The isotherm funciton should be a function of both pressure and temperature
         if isotherm_fun == None:
@@ -50,8 +101,28 @@ class IdealColumn:
             self._str = {'isotherm' : True,
                         'feedcond': False,
                         'opercond': False,}
+            
+        """
+        Instantiation. A `IdealColumn` class is instantiated by passing it the
+        pure-component adsorption isotherm in the form of a Pandas DataFrame.
+        The least squares data fitting is done here.
+        
+        :param n_comp: DataFrame pure-component adsorption isotherm data
+        :param isotherm_fun: String key for loading column in df
+        
+        :rtype: IdealColumn
+        """
 
     def isofunct(self, n_comp, isotherm_fun):
+        """
+        Given stored model parameters, compute loading at pressure P.
+        
+        :param pressure: Float or Array pressure (in corresponding units as df
+            in instantiation)
+        :return: predicted loading at pressure P (in corresponding units as df
+            in instantiation) using fitted model params in `self.params`.
+        :rtype: Float or Array
+        """
         if check_isotherm(n_comp, isotherm_fun):
             self._isofun = isotherm_fun
             self._n_comp = n_comp
@@ -60,6 +131,10 @@ class IdealColumn:
             print("should be equal to n_comp")
 
     def feedcond(self, P_feed, T_feed, y_feed):
+        """
+        Input feed condtions
+        
+        """
         if len(y_feed) != self._n_comp:
             print("Dim. of y_feed (feed composition)" )
             print("should be equal to n_comp")
@@ -83,11 +158,19 @@ class IdealColumn:
 
 
     def opercond(self, P_high, P_low):
+        """
+        Input operation condtions
+        
+        """
         self._P_high = P_high
         self._P_low = P_low
         self._str['opercond'] = True
     
     def runideal(self, tol = 1E-4):
+        """
+        Run the ideal PSA simulation.
+        
+        """
         isomix = self._isofun
         y_feed = self._y_feed
         P_feed = self._P_feed

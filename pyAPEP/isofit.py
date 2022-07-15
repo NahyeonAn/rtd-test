@@ -1,6 +1,4 @@
-"""
-isofit - Python module for isotherm paramter fitting.
-"""
+
 #%% Importing
 # numericals
 import numpy as np
@@ -118,6 +116,17 @@ def find_par(isofn, n_par, P,q, methods):
 #%% Single Isotherm 4: Fitting with diff. isotherm models
 def best_isomodel(P, q, iso_par_nums = [2, 3, 4], 
 iso_fun_lists = None, iso_fun_index = None, tol = 1.0E-5):
+    
+    """
+    Function to find best isotherm model for given datast with multiple isotherm and optimizer candidates.
+    
+    :param P: Partial pressure list
+    :param q: Acutal or simulated uptake list of given P
+    :param iso_par_nums: The number of parameters to isotherm fitting
+    :param iso_fun_lists: Isotherm candidates
+    
+    :return: iso_best, x_best, str_best, fnval_best
+    """
     if iso_fun_lists == None:
         iso_fun_lists = []
         for ii in iso_par_nums:
@@ -655,3 +664,5 @@ if __name__ == '__main__':
     print('Parameters:',xb_test)
     print('Model (string): ',strb_test)
 '''
+
+# %%
