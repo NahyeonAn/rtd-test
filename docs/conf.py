@@ -9,14 +9,15 @@
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
+
+# Read the docs 로 실행시 아래 코드 주석처리
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('/Users/Yongho/Documents/GitHub/rtdtest/pyAPEP'))
 
-# import pyAPEP.isofit
-# import pyAPEP.simide
-# import pyAPEP.simsep
+import pyAPEP.isofit
+import pyAPEP.simide
+import pyAPEP.simsep
 
 # -- Project information -----------------------------------------------------
 
