@@ -10,9 +10,32 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
-# Read the docs 로 실행시 아래 코드 주석처리
 import os
 import sys
+
+
+import numpy as np
+import pandas as pd
+
+# scipy
+from scipy.integrate import trapz
+from scipy.optimize import minimize
+from scipy.optimize import shgo
+from scipy.optimize import differential_evolution
+
+# import pickle
+
+# Graph
+import matplotlib.pyplot as plt
+from scipy.optimize import minimize
+from scipy.optimize import differential_evolution
+
+from scipy.integrate import odeint
+import matplotlib.pyplot as plt
+import time
+from scipy.interpolate import interp1d
+from scipy.integrate import solve_ivp
+
 sys.path.insert(0, os.path.abspath('/Users/Yongho/Documents/GitHub/rtdtest'))
 # sys.path.insert(0, os.path.abspath('.') + "/../rtdtest/")
 
