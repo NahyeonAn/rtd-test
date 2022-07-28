@@ -16,6 +16,6 @@ Here's tutorials.
 Class documentation and details
 ----------------------------------
 
-.. automodule:: simsep
+.. automodule:: pyAPEP.simsep
    :special-members:
    :members:

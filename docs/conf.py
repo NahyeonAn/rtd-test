@@ -19,7 +19,7 @@ if on_rtd == False:
 
 # import os
 # import sys
-sys.path.insert(0, os.path.abspath('.') + "/../rtdtest/")
+sys.path.insert(0, os.path.abspath('..'))
 
 #sys.path.insert(0, os.path.abspath('/Users/Yongho/Documents/GitHub/rtdtest'))
 # sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -52,6 +52,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.intersphinx',
     'sphinx.ext.extlinks',
+    'sphinx_automodapi.automodapi'
 ]
 
 # Add any paths that contain templates here, relative to this directory.

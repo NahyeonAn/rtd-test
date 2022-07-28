@@ -14,8 +14,8 @@ Tutorials
 Class documentation and details
 ----------------------------------
 
-.. automodule:: simide
+.. automodule:: pyAPEP.simide
     :special-members:
     :members:
 
-.. currentmodule:: simide
+.. currentmodule:: pyAPEP.simide
