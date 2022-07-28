@@ -13,9 +13,8 @@ Tutorials
 Here's tutorials.
 
 
-===============================
 Class documentation and details
-===============================
+----------------------------------
 
 .. automodule:: simsep
    :special-members:

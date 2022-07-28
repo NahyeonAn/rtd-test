@@ -11,9 +11,8 @@ Tutorials
 ---------
 
 
-===============================
 Class documentation and details
-===============================
+----------------------------------
 
 .. automodule:: simide
     :special-members:
