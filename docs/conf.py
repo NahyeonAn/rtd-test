@@ -11,8 +11,8 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
 # Read the docs 로 실행시 아래 코드 주석처리
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('/Users/Yongho/Documents/GitHub/rtdtest/pyAPEP'))
 sys.path.insert(0, os.path.abspath('.') + "/../rtdtest/")
 
