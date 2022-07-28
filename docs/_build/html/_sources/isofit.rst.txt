@@ -24,14 +24,14 @@ For our tutorial, we have the pure-component methane and ethane adsorption isoth
 Functions
 -----------
 
-.. currentmodule:: pyAPEP.isofit
+.. currentmodule:: isofit
 .. autofunction:: best_isomodel
 
-.. currentmodule:: pyAPEP.isofit
+.. currentmodule:: isofit
 .. autofunction:: fit_diffT
 
-.. currentmodule:: pyAPEP.isofit
+.. currentmodule:: isofit
 .. autofunction:: rast
 
-.. currentmodule:: pyAPEP.isofit
+.. currentmodule:: isofit
 .. autofunction:: IAST
