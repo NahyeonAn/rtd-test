@@ -10,11 +10,19 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
-import os
-import sys
+from __future__ import absolute_import
+import sys, os
+
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'  # check if on rtd
+if on_rtd == False:
+    import sphinx_rtd_theme  # for local
+
+# import os
+# import sys
+sys.path.insert(0, os.path.abspath('.') + "/../pyAPEP/")
 
 #sys.path.insert(0, os.path.abspath('/Users/Yongho/Documents/GitHub/rtdtest'))
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # sys.path.insert(0, os.path.abspath('.') + "/../rtdtest/")
 
 import pyAPEP.isofit
