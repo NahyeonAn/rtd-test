@@ -27,7 +27,7 @@ author = 'anna'
 # The full version, including alpha/beta/rc tags
 release = '2022'
 
-
+# --
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
