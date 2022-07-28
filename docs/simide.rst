@@ -11,11 +11,12 @@ Tutorials
 ---------
 
 
-API
----------
+===============================
+Class documentation and details
+===============================
 
-.. automodule:: pyAPEP.simide
+.. automodule:: simide
     :special-members:
     :members:
 
-.. currentmodule:: pyAPEP.simide
+.. currentmodule:: simide
