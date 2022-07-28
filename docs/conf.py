@@ -25,9 +25,9 @@ sys.path.insert(0, os.path.abspath('.') + "/../rtdtest/")
 # sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 # sys.path.insert(0, os.path.abspath('.') + "/../rtdtest/")
 
-import pyAPEP.isofit
-import pyAPEP.simide
-import pyAPEP.simsep
+# import pyAPEP.isofit
+# import pyAPEP.simide
+# import pyAPEP.simsep
 
 # -- Project information -----------------------------------------------------
 
