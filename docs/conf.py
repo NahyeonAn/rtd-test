@@ -12,9 +12,8 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('/Users/Yongho/Documents/GitHub/rtdtest/'))
+sys.path.insert(0, os.path.abspath('/Users/Yongho/Documents/GitHub/rtdtest/pyAPEP'))
 
-import pyAPEP
 import pyAPEP.isofit
 import pyAPEP.simide
 import pyAPEP.simsep
